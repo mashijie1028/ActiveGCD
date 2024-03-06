@@ -4,20 +4,21 @@ PyTorch implementation of our paper: **Active Generalized Category Discovery (CV
 
 ![diagram](assets/AGCD-diagram.png)
 
-We take the spirit of Active Learning (**AL**) and propose a new setting called Active Generalized Category Discovery (**AGCD**). We aim to address the inherent issues of Generalized Category Discovery (**GCD**), including imbalanced classification performance and inconsistent confidence between old and new classes. The goal is to improve the performance of GCD by actively selecting a limited amount of valuable samples for labeling from the oracle. To solve this problem, we devise an adaptive sampling strategy, which jointly considers *novelty*, *informativeness* and *diversity* to adaptively select novel samples with proper uncertainty. However, owing to the varied orderings of label indices caused by the clustering of novel classes, the queried labels are not directly applicable to subsequent training. To overcome this issue, we further propose a stable label mapping algorithm that transforms ground truth labels to the label space of the classifier, thereby ensuring consistent training across different active selection stages.
+To address the inherent issues of Generalized Category Discovery (**GCD**), including imbalanced classification performance and inconsistent confidence between old and new classes, we take the spirit of Active Learning (**AL**) and propose a new setting called Active Generalized Category Discovery (**AGCD**). The goal is to improve the performance of GCD by actively selecting a limited amount of valuable samples for labeling from the oracle. To solve this problem, we devise an adaptive sampling strategy, which jointly considers *novelty*, *informativeness* and *diversity* to adaptively select novel samples with proper uncertainty. However, owing to the varied orderings of label indices caused by the clustering of novel classes, the queried labels are not directly applicable to subsequent training. To overcome this issue, we further propose a stable label mapping algorithm that transforms ground truth labels to the label space of the classifier, thereby ensuring consistent training across different active selection stages.
 
 **Distinguishing between AL and AGCD.** (1) AGCD could be viewed as an open-world extrapolated version of AL requiring models to classify both old and new classes, and the unlabeled data could contain new classes. (2) In conventional AL, models are not trained on $\mathcal{D}_u$, which is only used for sample selection and only the selected samples engage in training. In contrast, in AGCD, models not only select samples in $\mathcal{D}_u$​ but are also trained on it.
 
-**Distinguishing between Open-Set AL and AGCD.** Open-set AL merely cares about accuracy of old classes, and treats new classes as noise/outliers, it aims to detect/filter them and mainly query samples from old classes. Instead, AGCD further clusters new classes.
+**Distinguishing between Open-Set AL and AGCD.** Open-set AL merely cares about the accuracy of old classes, and treats new classes as noise/outliers, it aims to detect/filter them and mainly query samples from old classes. Instead, AGCD further clusters new classes.
 
 
 
 In this repo, we set up the whole pipeline and workflow of AGCD with several data selection strategies. In AGCD, we perform:
 
 * Base model training.
-* Data selection with specific strategies.
-* Label mapping.
-* AGCD training.
+* Multi-round active learning:
+  * Data selection with specific strategies.
+  * Label mapping.
+  * AGCD training.
 
 By default, we use the training method [SimGCD](https://arxiv.org/abs/2211.11727) for model training. For other GCD training methods, please refer to their official implementations.
 
@@ -73,7 +74,7 @@ TO DO.
 
 ## Acknowledgements :gift:
 
-In building the AGCD codebase, we reference the following two repositories: [SimGCD](https://github.com/CVMI-Lab/SimGCD) and [DeepAL](https://github.com/ej0cl6/deep-active-learning/tree/master).
+In building the AGCD codebase, we reference the following two repositories: [SimGCD](https://github.com/CVMI-Lab/SimGCD) and [DeepAL](https://github.com/ej0cl6/deep-active-learning/tree/master)
 
 
 
