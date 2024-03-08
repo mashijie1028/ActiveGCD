@@ -4,6 +4,8 @@ PyTorch implementation of our paper: **[Active Generalized Category Discovery (C
 
 ![diagram](assets/AGCD-diagram.png)
 
+## New Setting :star2:
+
 To address the inherent issues of Generalized Category Discovery (**GCD**), including imbalanced classification performance and inconsistent confidence between old and new classes, we take the spirit of Active Learning (**AL**) and propose a new setting called Active Generalized Category Discovery (**AGCD**). The goal is to improve the performance of GCD by actively selecting a limited amount of valuable samples for labeling from the oracle. To solve this problem, we devise an adaptive sampling strategy, which jointly considers *novelty*, *informativeness* and *diversity* to adaptively select novel samples with proper uncertainty. However, owing to the varied orderings of label indices caused by the clustering of novel classes, the queried labels are not directly applicable to subsequent training. To overcome this issue, we further propose a stable label mapping algorithm that transforms ground truth labels to the label space of the classifier, thereby ensuring consistent training across different active selection stages.
 
 **Distinguishing between AL and AGCD.** (1) AGCD could be viewed as an open-world extrapolated version of AL requiring models to classify both old and new classes, and the unlabeled data could contain new classes. (2) In conventional AL, models are not trained on $\mathcal{D}_u$, which is only used for sample selection and only the selected samples engage in training. In contrast, in AGCD, models not only select samples in $\mathcal{D}_u$​ but are also trained on it.
