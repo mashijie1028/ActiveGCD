@@ -1,6 +1,6 @@
 # Active Generalized Category Discovery
 
-PyTorch implementation of our paper: **Active Generalized Category Discovery (CVPR 2024)**
+PyTorch implementation of our paper: **[Active Generalized Category Discovery (CVPR 2024)](https://arxiv.org/abs/2403.04272)**
 
 ![diagram](assets/AGCD-diagram.png)
 
@@ -43,7 +43,7 @@ tqdm
 
 We conduct experiments on 7 dataset:
 
-* Generic datasets: CIFAR-10, CIFAR-100 and ImageNet-100
+* Generic datasets: CIFAR-10, CIFAR-100, ImageNet-100
 * Fine-grained datasets: [CUB](https://drive.google.com/drive/folders/1kFzIqZL_pEBVR7Ca_8IKibfWoeZc3GT1), [Stanford Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html), [FGVC-Aircraft](https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/), [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
 
 ### Config
@@ -68,7 +68,14 @@ CUDA_VISIBLE_DEVICES=0 python train_al_ema.py --dataset_name 'cub' --num_workers
 
 ## Citing this work :clipboard:
 
-TO DO.
+```
+@article{ma2024active,
+    title={Active Generalized Category Discovery}, 
+    author={Shijie Ma and Fei Zhu and Zhun Zhong and Xu-Yao Zhang and Cheng-Lin Liu},
+    journal={arXiv preprint arXiv:2403.04272},
+    year={2024}
+}
+```
 
 
 
