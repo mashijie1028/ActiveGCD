@@ -71,11 +71,13 @@ CUDA_VISIBLE_DEVICES=0 python train_al_ema.py --dataset_name 'cub' --num_workers
 ## Citing this work :clipboard:
 
 ```
-@article{ma2024active,
-    title={Active Generalized Category Discovery}, 
-    author={Shijie Ma and Fei Zhu and Zhun Zhong and Xu-Yao Zhang and Cheng-Lin Liu},
-    journal={arXiv preprint arXiv:2403.04272},
-    year={2024}
+@InProceedings{Ma_2024_CVPR,
+    author    = {Ma, Shijie and Zhu, Fei and Zhong, Zhun and Zhang, Xu-Yao and Liu, Cheng-Lin},
+    title     = {Active Generalized Category Discovery},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {16890-16900}
 }
 ```
 
