@@ -229,7 +229,7 @@ if __name__ == "__main__":
         al_dataset = AL_Data(X_train=al_source_dataset.data, Y_train=torch.LongTensor(al_source_dataset.targets), handler=DataHandler)   # NOTE!!! LongTensor
     al_net = AL_Net(net=model, net_ema=model_ema, args=args, device=device)
     al_strategy = get_strategy(args.strategy)(al_dataset, train_loader, test_loader_labelled, test_loader_unlabelled,
-                                              train_labeled_loader_ind_mapping, al_net, train_transform, test_transform, args)
+                                             None, train_labeled_loader_ind_mapping, al_net, train_transform, test_transform, args)
 
     # evaluate before AL
     args.logger.info('Evaluate before AL training...')
