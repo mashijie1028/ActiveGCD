@@ -30,7 +30,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size', default=128, type=int)
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--eval_funcs', nargs='+', help='Which eval functions to use', default=['v2', 'v2p'])
-    parser.add_argument('--dataset_name', type=str, default='scars', help='options: cifar10, cifar100, imagenet_100, cub, scars, fgvc_aricraft, herbarium_19')
+    parser.add_argument('--dataset_name', type=str, default='scars', help='options: cifar10, cifar100, imagenet_100, cub, scars, aircraft, herbarium_19')
 
     # dataset labels NOTE!!!
     parser.add_argument('--prop_train_labels', type=float, default=0.5)
