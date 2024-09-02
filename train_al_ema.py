@@ -30,7 +30,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size', default=128, type=int)
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--eval_funcs', nargs='+', help='Which eval functions to use', default=['v2', 'v2p'])
-    parser.add_argument('--dataset_name', type=str, default='scars', help='options: cifar10, cifar100, imagenet_100, cub, scars, fgvc_aricraft, herbarium_19')
+    parser.add_argument('--dataset_name', type=str, default='scars', help='options: cifar10, cifar100, imagenet_100, cub, scars, fgvc_aircraft, herbarium_19')
 
     # dataset labels NOTE!!!
     parser.add_argument('--prop_train_labels', type=float, default=0.5)
@@ -220,7 +220,7 @@ if __name__ == "__main__":
         al_dataset = AL_Data_CUB(Data=al_source_dataset.data, Uq_idxs=al_source_dataset.uq_idxs, target_transform=al_source_dataset.target_transform, handler=CUBDataHandler)
     elif args.dataset_name == 'scars':
         al_dataset = AL_Data_Cars(Data=al_source_dataset.data, Target=al_source_dataset.target, Uq_idxs=al_source_dataset.uq_idxs, target_transform=al_source_dataset.target_transform, handler=CarsDataHandler)
-    elif args.dataset_name == 'aircraft':
+    elif args.dataset_name == 'fgvc_aircraft':
         al_dataset = AL_Data_Aircraft(Samples=al_source_dataset.samples, Uq_idxs=al_source_dataset.uq_idxs, target_transform=al_source_dataset.target_transform, handler=AircraftDataHandler)
     elif args.dataset_name == 'herbarium_19':
         al_dataset = AL_Data_Herb19(Samples=al_source_dataset.samples, Targets=al_source_dataset.targets,

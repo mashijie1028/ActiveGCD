@@ -164,7 +164,7 @@ def get_class_splits(args):
                 args.train_classes = range(args.num_old_classes)
                 args.unlabeled_classes = range(args.num_old_classes, 196)
 
-    elif args.dataset_name == 'aircraft':
+    elif args.dataset_name == 'fgvc_aircraft':
 
         args.image_size = 224
         if use_ssb_splits:
