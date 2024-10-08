@@ -43,7 +43,7 @@ tqdm
 
 ### Datasets
 
-We conduct experiments on 7 dataset:
+We conduct experiments on 7 datasets:
 
 * Generic datasets: CIFAR-10, CIFAR-100, ImageNet-100
 * Fine-grained datasets: [CUB](https://drive.google.com/drive/folders/1kFzIqZL_pEBVR7Ca_8IKibfWoeZc3GT1), [Stanford Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html), [FGVC-Aircraft](https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/), [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
