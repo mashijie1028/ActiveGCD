@@ -1,6 +1,6 @@
 # Active Generalized Category Discovery
 
-PyTorch implementation of our CVPR 2024 paper: **Active Generalized Category Discovery [[arxiv]](https://arxiv.org/abs/2403.04272) [[CVPR2024]](https://openaccess.thecvf.com/content/CVPR2024/html/Ma_Active_Generalized_Category_Discovery_CVPR_2024_paper.html)**
+PyTorch implementation of our CVPR 2024 paper: **Active Generalized Category Discovery [[arXiv]](https://arxiv.org/abs/2403.04272) [[CVPR2024]](https://openaccess.thecvf.com/content/CVPR2024/html/Ma_Active_Generalized_Category_Discovery_CVPR_2024_paper.html)**
 
 ![diagram](assets/AGCD-diagram.png)
 
