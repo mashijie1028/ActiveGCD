@@ -55,7 +55,7 @@ Set paths to datasets in `config.py` and `utils_al/handler.py`
 ### Training the base model
 
 ```shell
-CUDA_VISIBLE_DEVICES=0 python train_base.py --dataset_name 'cub' --prop_train_labels 0.5 --num_old_classes -1 --batch_size 128 --grad_from_block 11 --epochs 100 --num_workers 4 --use_ssb_splits --sup_weight 0.35 --weight_decay 5e-5 --transform 'imagenet' --lr 0.1 --eval_funcs 'v2' --warmup_teacher_temp 0.07 --teacher_temp 0.04 --warmup_teacher_temp_epochs 30 --memax_weight 2 --exp_name cub_simgcd_base
+CUDA_VISIBLE_DEVICES=0 python train_base.py --dataset_name 'cub' --prop_train_labels 0.2 --num_old_classes -1 --batch_size 128 --grad_from_block 11 --epochs 100 --num_workers 4 --use_ssb_splits --sup_weight 0.35 --weight_decay 5e-5 --transform 'imagenet' --lr 0.1 --eval_funcs 'v2' --warmup_teacher_temp 0.07 --teacher_temp 0.04 --warmup_teacher_temp_epochs 30 --memax_weight 2 --exp_name cub_simgcd_base
 ```
 
 ### Multi-rounds Active Learning for GCD
